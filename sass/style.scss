@@ -1,7 +1,82 @@
+$main-color: #fed136;
+$main-font: 'Montserrat', sans-serif;
+$second-font: 'Roboto Slab', serif;
+
 body {
     margin: 0;
+    font-family: $main-font;
+}
+
+.splash {
+    background-image: url("/images/background-image.png");
+    background-position: center center;
+    background-size: cover;
+    height: 700px;
+    color: #fff;
+    display: flex;
+
+    .splash-inner {
+        // position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+    }
+    .nav {
+        display: flex;
+        flex-direction: row;
+    }
+    .nav .box {
+        flex: 1;
+        align-self: center;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    
+    .logo {
+        color: $main-color;
+        font-family: 'Dancing Script', cursive;
+        font-size: 26px;
+    }
+    h2 {
+        margin: 0;
+        padding-top: 210px;
+        font-family: 'Lora', serif;
+        font-size: 40px;
+        letter-spacing: -1px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    h1 {
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 60px;
+        font-size: 75px;
+        letter-spacing: -1.88px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    .btn {
+        position: relative;
+        width: 240px;
+        height: 65px;
+        background-color: $main-color;
+        border-radius: 2px;
+        margin: 0 auto;
+        .btn-inner {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            font-size: 14px;
+            transform: translate(-50%, -50%);
+            text-transform: uppercase;
+
+        }
+    }
 }
 
 .portfolio {
-    background-color: red;
+    background-color: #f7f7f7;
 }
