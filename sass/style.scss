@@ -59,24 +59,19 @@ body {
         margin: 0;
         text-transform: uppercase;
     }
-    .btn {
-        position: relative;
+        .btn {
+        display: flex;
         width: 240px;
         height: 65px;
         background-color: $main-color;
         border-radius: 2px;
         margin: 0 auto;
-        .btn-inner {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            font-size: 14px;
-            transform: translate(-50%, -50%);
-            text-transform: uppercase;
-
-        }
+        font-size: 14px;
+        text-transform: uppercase;
+        justify-content: center;
+        align-items: center;
     }
-}
+}    
 section {
     text-align: center;
     h2 {
@@ -116,8 +111,44 @@ section {
 
 .portfolio {
     background-color: #f7f7f7;
+    padding-bottom: 120px;
     .row {
         justify-content: space-between;
         margin-bottom: 50px;
+    }
+    .box {
+        background-color: #fff;
+    }
+}
+
+footer {
+    padding: 40px 0;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.35px;
+    color: #555555;
+    .copyrights {
+        display: flex;
+        justify-items: center;
+    }
+    .social-media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            text-decoration: none;
+            font-size: 0;
+        }
+        i {
+            font-size: 20px;
+            color: #fff;
+            background-color: $second-color;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 10px;
+            line-height: 40px;
+            text-align: center;
+        }
     }
 }
