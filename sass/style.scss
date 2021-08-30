@@ -9,12 +9,14 @@ body {
 }
 
 .splash {
+    padding: 0;
     background-image: url("/images/background-image.png");
     background-position: center center;
     background-size: cover;
     height: 700px;
     color: #fff;
     display: flex;
+    max-height: 100%;
 
     .splash-inner {
         // position: absolute;
@@ -24,6 +26,8 @@ body {
     .nav {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .nav .item {
         align-self: center;
@@ -43,7 +47,7 @@ body {
     }
     h2 {
         margin: 0;
-        padding-top: 210px;
+        padding-top: 25px;
         font-family: 'Lora', serif;
         font-size: 40px;
         letter-spacing: -1px;
@@ -52,7 +56,7 @@ body {
     }
     h1 {
         text-align: center;
-        padding-top: 50px;
+        padding-top: 120px;
         padding-bottom: 60px;
         font-size: 75px;
         letter-spacing: -1.88px;
@@ -88,11 +92,12 @@ body {
     }
 }    
 section {
+    padding-top: 80px;
+    padding-bottom: 80px;
     text-align: center;
     h2 {
+        margin: 0;
         font-size: 40px;
-        padding-top: 120px;
-        padding-bottom: 20px;
         color: $second-font;
         letter-spacing: -1px;
         text-align: center;
@@ -105,7 +110,6 @@ section {
 }
 .services {
     text-align: center;
-    padding-bottom: 120px;
     .card {
         margin-top: 80px;
     }
@@ -132,25 +136,31 @@ section {
 .portfolio {
     margin: 0;
     background-color: #f7f7f7;
-    padding-bottom: 120px;
     .row {
         justify-content: space-between;
+    }
+    .row:nth-of-type(1) {
         margin-bottom: 50px;
     }
     .box {
         background-color: #fff;
+        max-width: 290px;
+        padding: 0;
+        margin: 10px auto;
+        justify-content: center;
     }
     h2 {
         margin: 0 auto;
     }
     em {
-        display: inline-block;
-        
-        margin-bottom: 76px;
+        display: inline-block;    
+        margin-bottom: 40px;
     }
     .image-box {
         position: relative;
         cursor: pointer;
+        width: fit-content;
+
         .btn {
             display: none;
             position: absolute;
@@ -217,6 +227,43 @@ footer {
         }
         i:hover {
             transform: scale(1.2);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .splash {
+        padding: 0;
+        h1 {
+            font-size: 45px;
+            padding-top: 20%;
+            padding-bottom: 20%;
+        }
+        h2 {
+            font-size: 24px;
+            padding-top: 20%;
+        }
+        .nav {
+            justify-content: space-around;
+        }
+        .nav .item {
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+    }
+    section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .services {
+        .card {
+            margin-top: 8%;
+        }
+    }
+    footer {
+        .copyrights {
+            display: flex;
+            justify-content: center;
         }
     }
 }
